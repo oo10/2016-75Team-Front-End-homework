@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scala=1"/>
+    <title>CCS编辑器-作业</title>
+    <link href="style.css" type="text/html" rel="stylesheet">
+    <script src="module.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="swap">
+    <section id="control">
+        <ul>
+            <li>
+                <span>animation-duration:</span> <!--animate time-->
+                <input type="range" step="0.1" min="0.2" max="4" id="rangeinput" value="2" onchange="range0value.value=parseFloat(value).toFixed(1)">
+                <span><output id="range0value">2.0</output>s</span>
+            </li>
+            <li>
+                <span>animation-timing:</span>
+                <select id="timing">
+                    <option>ease</option>
+                    <option>linear</option>
+                    <option>ease-in</option>
+                    <option>ease-out</option>
+                    <option>ease-in-out</option>
+                </select>
+            </li>
+            <li>
+                <span>scale:</span>
+                <input type="range" step="0.1" min="0.1" max="1.6" id="rangeinput" value="1" onchange="range1value.value=parseFloat(value).toFixed(1)">
+                <span><output id="range1value">1.0</output></span>
+            </li>
+            <li>
+                <span>rotate:</span>
+                <input type="range" step="1" min="0" max="360" id="rangeinput" value="18" onchange="range2value.value=parseFloat(value).toFixed(0)">
+                <span><output id="range2value">18</output>deg</span>
+            </li>
+            <li>
+                <span>translate:</span>
+                <input type="range" step="1" min="-100" max="100" id="rangeinput" value="0" onchange="range3value.value=parseFloat(value).toFixed(0)">
+                <span><output id="range3value">0</output>px</span>
+            </li>
+            <li>
+                <span>skew:</span>
+                <input type="range" step="1" min="0" max="50" id="rangeinput" value="0" onchange="range4value.value=parseFloat(value).toFixed(0)">
+                <span><output id="range4value">0</output>deg</span>
+            </li>
+            <li id="options">
+                <input type="checkbox" checked id="opt_css3"><label for="opt_css3"> CSS3</label>
+                <input type="checkbox" checked id="opt_webkit"><label for="opt_webkit"> WebKit</label>
+                <input type="checkbox" checked id="opt_gecko"><label for="opt_gecko"> Gecko</label>
+            </li>
+        </ul>
+    </section>
+    <section id="demo">
+        <div class="demodisplay" id="demodisplay"></div>
+    </section>
+    <section id="codearea">
+        <textarea id="textdispaly" disabled>loading</textarea>
+    </section>
+</div>
+<script src="js.js" type="text/javascript"></script>
+</body>
+</html>
+
